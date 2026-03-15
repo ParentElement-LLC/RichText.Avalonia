@@ -5,4 +5,5 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="ParentElement.RichText.Avalonia/ParentElement.RichText.Avalonia.csproj" />
+  <Project Path="ParentElement.RichText.Avalonia.Tests/ParentElement.RichText.Avalonia.Tests.csproj" />
 </Solution>

@@ -3,9 +3,29 @@
 		<TargetFramework>net10.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
 		<Configurations>Debug;Release;Debug_All</Configurations>
 	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+		<Title>RichText Avalonia Integration</Title>
+		<Authors>ParentElement, LLC</Authors>
+		<Company>ParentElement, LLC</Company>
+		<PackageId>ParentElement.RichText.Avalonia</PackageId>
+		<PackageIcon>icon.png</PackageIcon>
+		<RepositoryUrl>https://github.com/ParentElement-LLC/RichText.Avalonia</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/ParentElement-LLC/RichText.Avalonia</PackageProjectUrl>
+		<PackageTags>rich text, rich, text, Skia, SkiaSharp, Font</PackageTags>
+		<Description>Avalonia utilities and integration for ParentElement.RichText.Core.</Description>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<Copyright>2026</Copyright>
+		<EnablePackageValidation>true</EnablePackageValidation>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IsPackable>true</IsPackable>
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+		<NoWarn>NU5104</NoWarn> <!-- Disable pre-release dependency warning during pre-release phase development -->
+	</PropertyGroup>
+	
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
 	</PropertyGroup>
@@ -23,5 +43,14 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Avalonia.Skia" Version="11.3.12" />
+	</ItemGroup>
+	<ItemGroup>
+		<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+			<_Parameter1>ParentElement.RichText.Avalonia.Tests</_Parameter1>
+		</AssemblyAttribute>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="icon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 </Project>
