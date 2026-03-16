@@ -36,7 +36,7 @@
 		<TreatWarningsAsErrors>True</TreatWarningsAsErrors>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(Configuration)' == 'Debug_All'">
-		<ProjectReference Include="../../RichText.Core/src/ParentElement.RichText.Core/ParentElement.RichText.Core.csproj" />
+		<ProjectReference Include="../../../RichText.Core/src/ParentElement.RichText.Core/ParentElement.RichText.Core.csproj" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(Configuration)' != 'Debug_All'">
 		<PackageReference Include="ParentElement.RichText.Core" Version="0.0.1-pre" />		
