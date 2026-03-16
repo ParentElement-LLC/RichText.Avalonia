@@ -15,7 +15,7 @@ namespace ParentElement.RichText.Avalonia.Platform;
 /// returns false — which would null _cache and cause blank frames if the same instance
 /// were reused. Instead, a lightweight DocumentRenderOp is created fresh each frame.
 /// </summary>
-internal sealed class DocumentRenderer : IDisposable
+public sealed class DocumentRenderer : IDisposable
 {
     private readonly DocumentController _doc;
     private SKPicture? _cache;
@@ -73,7 +73,7 @@ internal sealed class DocumentRenderer : IDisposable
 /// Avalonia calls Dispose() on the previous frame's instance — which is a no-op here
 /// because this class owns no resources. The actual cache lives in DocumentRenderer.
 /// </summary>
-internal sealed class DocumentRenderOp : ICustomDrawOperation
+public sealed class DocumentRenderOp : ICustomDrawOperation
 {
     private readonly DocumentRenderer _renderer;
 
